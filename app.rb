@@ -12,8 +12,8 @@ get "/posts/:id/edit" do
   erb "posts/edit"
 end
 
-get "/posts/:id" do
-  @post = Post.find(params[:id])
+get "/posts/:name" do
+  @post = Post.find_by_name(params[:name])
   erb "posts/show"
 end
 
